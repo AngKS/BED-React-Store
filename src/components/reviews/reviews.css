@@ -1,0 +1,12 @@
+.review {
+    margin: 3px;
+    padding: 3px
+}
+
+.review-container {
+    text-align: left;
+}
+
+.metadata {
+    color: #4f4f4f
+}

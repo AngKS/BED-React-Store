@@ -1,0 +1,36 @@
+.main-container {
+    width: 100%;
+    font-family: Roboto, sans-serif;
+    text-align: start;
+}
+
+.productInfo {
+    padding: 10px;
+    margin: 5px;
+}
+
+.productDesc {
+    text-align: left;
+    padding: 3px;
+}
+
+.productDesc>p {
+    color: #6c757d;
+}
+
+.productImage {
+    max-width: 500px;
+    height: auto;
+    padding: 10px;
+}
+
+.productDescription {
+    font-family: Futura;
+    text-align: left;
+    padding: 5px;
+}
+
+.ratingLabel{
+    margin-right: 5px;
+}
+
