@@ -31,7 +31,7 @@ function Signup() {
             axios({
                 method: "POST",
                 url: "https://react-game-marketplace.herokuapp.com/api/signup",
-                headers: {'Access-Control-Allow-Origin': 'https://bed-react-store.netlify.app/'},
+                headers: {'Access-Control-Allow-Origin': 'http://bed-react-store.netlify.app/'},
                 data : {
                     username : regUser,
                     email : regEmail,

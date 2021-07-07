@@ -9,7 +9,7 @@ function NewCategory(props) {
     const [verified, setVerified] = useState(false)
     const [result, setResult] = useState()
 
-    let header = { 'authorization': 'Bearer ' + props.token, 'Access-Control-Allow-Origin': 'https://bed-react-store.netlify.app/' }
+    let header = { 'authorization': 'Bearer ' + props.token, 'Access-Control-Allow-Origin': 'http://bed-react-store.netlify.app/' }
 
     
 
@@ -34,7 +34,7 @@ function NewCategory(props) {
         let verification = async () => {
             await axios({
                 method : "POST",
-                url: "http://localhost:8081/verify",
+                url: "https://react-game-marketplace.herokuapp.com/verify",
                 headers : header,
                 data : JSON.parse(localStorage.getItem("user"))
             }).then(res => {

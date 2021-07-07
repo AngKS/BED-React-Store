@@ -16,7 +16,7 @@ function NewGame(props) {
     const [selectedCat, setSelectedCat] = useState()
     const [regYear, setRegYear] = useState()
 
-    let header = { 'authorization': 'Bearer ' + props.token, 'Access-Control-Allow-Origin': 'https://bed-react-store.netlify.app/' }
+    let header = { 'authorization': 'Bearer ' + props.token, 'Access-Control-Allow-Origin': 'http://bed-react-store.netlify.app/' }
 
     let submitGame = () => {
         console.log(regGameName, regGameDesc, regPrice, regPlatform, selectedCat, regYear);
@@ -57,7 +57,7 @@ function NewGame(props) {
         let verification = async () => {
             await axios({
                 method: "POST",
-                url: "http://localhost:8081/verify",
+                url: "https://react-game-marketplace.herokuapp.com/verify",
                 headers: header,
                 data: JSON.parse(localStorage.getItem("user"))
             }).then(res => {
@@ -70,7 +70,7 @@ function NewGame(props) {
         let getCategories = async () => {
             await axios({
                 method: "GET",
-                url: "http://localhost:8081/categories",
+                url: "https://react-game-marketplace.herokuapp.com/categories",
                 headers: header
             }).then(res => {
                 let response = res.data
