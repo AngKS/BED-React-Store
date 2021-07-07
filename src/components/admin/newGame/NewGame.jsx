@@ -16,7 +16,7 @@ function NewGame(props) {
     const [selectedCat, setSelectedCat] = useState()
     const [regYear, setRegYear] = useState()
 
-    let header = { 'authorization': 'Bearer ' + props.token }
+    let header = { 'authorization': 'Bearer ' + props.token, 'Access-Control-Allow-Origin': 'https://bed-react-store.netlify.app/' }
 
     let submitGame = () => {
         console.log(regGameName, regGameDesc, regPrice, regPlatform, selectedCat, regYear);

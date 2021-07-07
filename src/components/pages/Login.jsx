@@ -17,6 +17,7 @@ function Login() {
         axios({
             method : "POST",
             url: "https://react-game-marketplace.herokuapp.com/api/login",
+            headers: {'Access-Control-Allow-Origin': 'https://bed-react-store.netlify.app/'},
             data : {
                 email : email,
                 password : password

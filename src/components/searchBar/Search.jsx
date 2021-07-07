@@ -13,7 +13,7 @@ function Search(props) {
 
     useEffect(() => {
         let getGames = async () => {
-            await axios.get("https://react-game-marketplace.herokuapp.com/games").then(res => {
+            await axios.get("https://react-game-marketplace.herokuapp.com/games", { headers: {'Access-Control-Allow-Origin': 'https://bed-react-store.netlify.app/'}}).then(res => {
                 let response = res.data
                 setGames(response)
             })

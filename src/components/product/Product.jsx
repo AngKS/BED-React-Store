@@ -14,7 +14,7 @@ function Product() {
     useEffect(() => {
         let productKey = localStorage.getItem("game")
         console.log(productKey)
-        axios.get(`https://react-game-marketplace.herokuapp.com/game/${productKey}`).then(res => {
+        axios.get(`https://react-game-marketplace.herokuapp.com/game/${productKey}`, { headers: {'Access-Control-Allow-Origin': 'https://bed-react-store.netlify.app/'}}).then(res => {
             const game = res.data
             setProduct(game)
         })

@@ -16,7 +16,7 @@ function Reviews() {
     
     useEffect(() => {
         let gameKey = localStorage.getItem("game")
-        axios.get(`https://react-game-marketplace.herokuapp.com/reviews/${gameKey}`).then(res => {
+        axios.get(`https://react-game-marketplace.herokuapp.com/reviews/${gameKey}`, { headers: {'Access-Control-Allow-Origin': 'https://bed-react-store.netlify.app/'}}).then(res => {
             const allReviews = res.data
             setReview(allReviews)
             
@@ -27,7 +27,7 @@ function Reviews() {
     }, [])
 
     let sendReview = () => {
-        let header = { 'authorization': 'Bearer ' + localStorage.getItem('token') }
+        let header = { 'authorization': 'Bearer ' + localStorage.getItem('token'), 'Access-Control-Allow-Origin': 'https://bed-react-store.netlify.app/' }
         axios({
             method : "POST",
             headers: header,

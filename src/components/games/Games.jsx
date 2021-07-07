@@ -8,7 +8,7 @@ function Games(props) {
     const [games, setGames] = useState()
 
     useEffect(() => {
-        axios.get("https://react-game-marketplace.herokuapp.com/games").then(res => {
+        axios.get("https://react-game-marketplace.herokuapp.com/games", { headers: {'Access-Control-Allow-Origin': 'https://bed-react-store.netlify.app/'}}).then(res => {
             const allGames = res.data
             setGames(allGames)
         })

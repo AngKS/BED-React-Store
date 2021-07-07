@@ -9,7 +9,7 @@ function NewCategory(props) {
     const [verified, setVerified] = useState(false)
     const [result, setResult] = useState()
 
-    let header = { 'authorization': 'Bearer ' + props.token }
+    let header = { 'authorization': 'Bearer ' + props.token, 'Access-Control-Allow-Origin': 'https://bed-react-store.netlify.app/' }
 
     
 
