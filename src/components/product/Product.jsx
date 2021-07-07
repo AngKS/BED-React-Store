@@ -38,7 +38,7 @@ function Product() {
                 product ? (
                     <div className="container shadow-lg">
                         <section className="productInfo d-md-flex ">
-                            <img className="productImage" src={(product[0].src ? (product[0].src) : "./img/placeholder.jpg")} alt="" />
+                            <img className="productImage w-100" src={(product[0].src ? (product[0].src) : "./img/placeholder.jpg")} alt="" />
                             <div className="productDesc">
                                 <h1><strong>{product[0].title}</strong></h1>
                                 <p>{product[0].platform}</p>
