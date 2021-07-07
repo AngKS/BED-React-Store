@@ -63,7 +63,7 @@ function Signup() {
                         <select className="typeControl" id="type" onChange={data => setType(data.target.value)}>
                             <option disabled>-- Select one --</option>
                             <option>user</option>
-                            <option>admin</option>
+                            <option disabled>admin</option>
                         </select>
                         
                     </div>
